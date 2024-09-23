@@ -17,6 +17,7 @@ public class InsertionState  implements VendingMachineState {
 
     @Override
     public void insertCoin(int currentDenomination, VendingMachineState vendingMachineState) {
+        System.out.println("Inserted note"+currentDenomination);
         AddAmountToTotalAmountInserted(currentDenomination);
     }
 
@@ -41,7 +42,7 @@ public class InsertionState  implements VendingMachineState {
     }
 
     private void AddAmountToTotalAmountInserted(int currentDenomination) {
-        int currentPriceAccumulated = selectedProductDto.getPriceOfTheProduct();
+        int currentPriceAccumulated = selectedProductDto.getCurrentTotalAmountInserted();
         selectedProductDto.setCurrentTotalAmountInserted(currentPriceAccumulated + currentDenomination);
     }
 

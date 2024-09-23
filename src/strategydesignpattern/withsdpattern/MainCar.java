@@ -41,7 +41,7 @@ public class MainCar {
                 Select any one of them \s
                 1 for FastDrive \s
                 2 for NormalDriving \s
-                3 for No Driving """);
+                3 for No Driving""");
         int data = sc.nextInt();
         Drive drive1 = switch (data) {
             case 1 -> new FastDrive();

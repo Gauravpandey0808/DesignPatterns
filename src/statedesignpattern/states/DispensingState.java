@@ -39,20 +39,24 @@ public class DispensingState implements VendingMachineState {
     @Override
     public void refundAmount(VendingMachineState vendingMachineState) throws Exception {
         Iterator<ProductDto> itr = listOfProductDto.listIterator();
-        while(itr.hasNext()) {
-            if(itr.next().getItemDetails().equals(selectedProductDto.getProductEnum())) {
-                itr.next().setQuantity(itr.next().getQuantity()-1);
-                System.out.println("Quantity of : "+itr.next().getItemDetails()+"and new quantity is : "+itr.next().getQuantity());
+        while (itr.hasNext()) {
+            ProductDto currentProduct = itr.next();
+
+            if (currentProduct.getItemDetails().equals(selectedProductDto.getProductEnum())) {
+                currentProduct.setQuantity(currentProduct.getQuantity() - 1);
+                System.out.println("Bought item: " + currentProduct.getItemDetails() + " and new quantity is: " + currentProduct.getQuantity());
+                System.out.println("Cost of : "+currentProduct.getItemDetails()+" is : "+currentProduct.getCost());
+                System.out.println("Refunded amount: "+ (selectedProductDto.getCurrentTotalAmountInserted() - currentProduct.getCost()));
+                System.out.println("Thanks for choosing us");
+                return;
             }
         }
-       throw new Exception("There is some issue while refunding.Please contact customer care");
-
-
+        throw new Exception("There is some issue while refunding. Please contact customer care");
     }
+
 
     @Override
     public VendingMachineState dispenseProduct(VendingMachineState vendingMachineState) throws Exception {
-            System.out.println("We have dispensed the product and the product is "+selectedProductDto.getProductEnum());
             vendingMachineState.refundAmount(vendingMachineState);
             return vendingMachineState.stateChangeButton(vendingMachineState);
     }
