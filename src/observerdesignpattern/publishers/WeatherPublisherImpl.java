@@ -8,6 +8,14 @@ import java.util.HashSet;
 import java.util.Set;
 
 
+/**
+ *
+ * <h1>WeatherPublisherImpl Concrete Class</h1>
+ * <p>This class implements the {@link WeatherPublisher} interface.</p>
+ * <p>It manages the entire life cycle of changes, including broadcasting updates,
+ * adding and removing subscribers, notifying subscribers, and retrieving updated data.</p>
+ *
+ */
 
 public class WeatherPublisherImpl implements WeatherPublisher {
 

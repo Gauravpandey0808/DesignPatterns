@@ -11,7 +11,11 @@ import java.util.Scanner;
  * encapsulated in separate classes.
  * <p>
  * The following classes implement different driving strategies:
- * <b>FastDrive</b>, <b>NoDrive</b>, and <b>NormalDrive</b>.
+ *     <ul>
+ *         <li><b>FastDrive</b></li>
+ *         <li><b>NoDrive</b></li>
+ *         <li><b>NormalDrive</b></li>
+ *     </ul>
  * These classes implement the <b>Drive</b> interface, which defines a common method
  * for driving behavior.
  * <p>
@@ -37,8 +41,7 @@ public class MainCar {
                 Select any one of them \s
                 1 for FastDrive \s
                 2 for NormalDriving \s
-                3 for No Driving \s
-                4 Wrong""");
+                3 for No Driving """);
         int data = sc.nextInt();
         Drive drive1 = switch (data) {
             case 1 -> new FastDrive();
