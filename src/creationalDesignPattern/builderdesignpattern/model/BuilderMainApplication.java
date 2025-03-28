@@ -1,5 +1,22 @@
 package creationalDesignPattern.builderdesignpattern.model;
 
+/**
+ *
+ * <h3>Builder design pattern</h3>
+ * <p>
+ *     Builder design pattern is the creational design pattern
+ *     used to construct complex objects step by step
+ * </p>
+ * <p>
+ *     The builder design pattern suggests that you extracts all
+ *     the object construction code outside of the class and move
+ *     it to different objects called builder.
+ *     The builder design pattern organizes the construction of object
+ *     into step by step process
+ * </p>
+ *
+ */
+
 public class BuilderMainApplication {
 
     public static void main(String[] args) {
@@ -20,7 +37,7 @@ public class BuilderMainApplication {
                 .setFullName("Gaurav Pandey")
                 .setStandard("Btech")
                 .setRollNo("30")
-                .setEmail("1123")
+                .setEmail("gaurav3.pandey@gmail.com")
                 .build();
 
         System.out.println("Name of the student is : "+student.getFullName()+
