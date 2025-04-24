@@ -15,6 +15,6 @@ public class InfoLogger extends Logger {
 
     @Override
     public void handleRequest(LogRequest request) {
-        System.out.println("[DEBUG]: " + request.getErrorMessage());
+        System.out.println("[INFO]: " + request.getErrorMessage());
     }
 }

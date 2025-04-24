@@ -16,5 +16,6 @@ public class PizzaBaseClass {
 
         System.out.println(obj1.getPizzaName());
         System.out.println(obj1.getFinalPrice());
+
     }
 }
